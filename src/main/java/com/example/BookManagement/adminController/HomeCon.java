@@ -10,4 +10,9 @@ public class HomeCon {
     public String doHome() {
         return "/Admin/adminMain";
     }
+
+    @GetMapping("/Admin/adminReservation")
+    public String doReservation() {
+        return "/Admin/adminReservation";
+    }
 }

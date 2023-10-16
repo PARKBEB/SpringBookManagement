@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>AdminReservation</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 50px; margin-top: 30px;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/img/logo2.PNG" alt="" width="200px" height="75px">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">만화 대여</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">만화 반납</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">만화 등록</a>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-right: 50px;">
+            <button class="navbar-text">
+                로그인
+            </button>
+        </div>
+    </div>
+</nav>
+<input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style="display: none;"/>
+<div id="image_container"></div>
+<button id="imgBtn" onclick="document.getElementById('image').click();">이미지 선택</button>
+<button id="imgRemoveBtn" style="display: none;">이미지 삭제</button>
+
+<script>
+    function setThumbnail(event) {
+      var reader = new FileReader();
+
+      reader.onload = function(event) {
+        var img = document.createElement("img");
+        img.setAttribute("src", event.target.result);
+        document.querySelector("div#image_container").appendChild(img);
+
+        // 파일 선택 버튼 감춤
+      var fileInput = document.getElementById('imgBtn');
+      fileInput.style.display = 'none';
+
+      var fileInput2 = document.getElementById('imgRemoveBtn');
+      fileInput2.style.display = 'inline';
+      };
+
+      reader.readAsDataURL(event.target.files[0]);
+    }
+
+
+    imgRemoveBtn.addEventListener('click', function () {
+        var image_container = document.getElementById('image_container');
+        var image = document.getElementById('image');
+
+        image_container.innerHTML = ''; // 이미지 삭제
+        image.value = ''; // 파일 선택 필드 초기화
+
+        var fileInput = document.getElementById('imgBtn');
+        fileInput.style.display = 'inline';
+
+        var fileInput2 = document.getElementById('imgRemoveBtn');
+        fileInput2.style.display = 'none';
+    });
+</script>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

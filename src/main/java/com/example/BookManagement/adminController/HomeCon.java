@@ -12,7 +12,12 @@ public class HomeCon {
     }
 
     @GetMapping("/Admin/adminReservation")
-    public String doReservation() {
+    public String doAdminReservation() {
         return "/Admin/adminReservation";
+    }
+
+    @GetMapping("/Admin/adminBookInsert")
+    public String doAdminBookInsert() {
+        return "/Admin/adminBookInsert";
     }
 }

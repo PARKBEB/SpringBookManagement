@@ -6,8 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>AdminReservation</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: space-between;
+            }
+         #imgBtn {
+            height : 50px;
+            margin-top : 100px;
+            }
+
+    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 50px; margin-top: 30px;">
@@ -35,11 +47,48 @@
         </div>
     </div>
 </nav>
-<input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style="display: none;"/>
-<div id="image_container"></div>
-<button id="imgBtn" onclick="document.getElementById('image').click();">이미지 선택</button>
-<button id="imgRemoveBtn" style="display: none;">이미지 삭제</button>
+<div class="container">
+    <input type="file" id="image" accept="image/*" onchange="setThumbnail(event);" style="display: none;"/>
+    <button id="imgBtn" onclick="document.getElementById('image').click();" style="width: 434px; height: 636px;">이미지
+        선택
+    </button>
+    <div id="image_container"></div>
+    <form method="get" action="">
+        <table style="margin-top:100px">
+            <tr>
+                <td>
+                    <table class="table2">
 
+                        <tr>
+                            <td>제목</td>
+                            <td><input type=text name=title size=60></td>
+                        </tr>
+
+                        <tr>
+                            <td>지은이</td>
+                            <td><input type=text name=name size=20></td>
+                        </tr>
+                        <tr>
+                            <td>등록일</td>
+                            <td><input type=text name=reg_date size=20></td>
+                        </tr>
+                        <tr>
+                            <td>도서수</td>
+                            <td><input type=text name=bookNum size=20></td>
+                        </tr>
+                        <tr>
+                            <td>내용</td>
+                            <td><textarea name="content" cols=85 rows=15></textarea></td>
+                        </tr>
+                    </table>
+
+                    <button style="margin-left: 50px;">등록</button>
+                    <button id="imgRemoveBtn" style="display: none;">이미지 삭제</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
 <script>
     function setThumbnail(event) {
       var reader = new FileReader();
@@ -47,6 +96,10 @@
       reader.onload = function(event) {
         var img = document.createElement("img");
         img.setAttribute("src", event.target.result);
+        img.style.width = '434px';
+        img.style.height = '636px';
+        img.style.marginTop = '100px';
+
         document.querySelector("div#image_container").appendChild(img);
 
         // 파일 선택 버튼 감춤
@@ -76,6 +129,8 @@
     });
 </script>
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
 </html>

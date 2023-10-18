@@ -20,4 +20,9 @@ public class HomeCon {
     public String doAdminBookInsert() {
         return "/Admin/adminBookInsert";
     }
+
+    @GetMapping("/Admin/adminBookReturn")
+    public String doAdminBookReturn() {
+        return "/Admin/adminBookReturn";
+    }
 }

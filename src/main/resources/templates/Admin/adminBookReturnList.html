@@ -37,18 +37,47 @@
     </div>
 </nav>
 <div style="margin-top: 10%;"></div>
-<form action="/Admin/adminBookReturnList" style="width: 25%; margin: 0 auto; padding: 3% 0 3% 0; background: linear-gradient(to left, #8f71ff, #8bffff); text-align: center;">
-    <h2 style="margin-bottom: 40px;">도서 반납</h2>
-    <div class="mb-3">
-        예약 비밀번호: <input type="text" name="phoneNum" placeholder="휴대폰 번호 8자리">
-    </div>
-    <div class="mb-3">
-        <p>반납문구</p>
-        <p>반납 하는 방법</p>
-    </div>
-    <input type="submit" value="확인" style="width: 100px;height: 30px;font-weight: bold; font-size: medium;">
+<form style="width: 40%; margin: 0 auto;">
+    <p>도서 반납수:</p>
+    <table class="table">
+        <thead class="table-dark">
+        <tr>
+            <th scope="col">CHK</th>
+            <th scope="col">도서명</th>
+            <th scope="col">대여일</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+            <td>옆자리 괴물군</td>
+            <td>2023-10-19</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2"></td>
+            <td>옆자리 괴물군</td>
+            <td>2023-10-19</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3"></td>
+            <td>옆자리 괴물군</td>
+            <td>2023-10-19</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4"></td>
+            <td>옆자리 괴물군</td>
+            <td>2023-10-19</td>
+        </tr>
+        <tr>
+            <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5"></td>
+            <td>옆자리 괴물군</td>
+            <td>2023-10-19</td>
+        </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="도서 반납" style="width: 100px;height: 30px;font-weight: bold; font-size: medium; margin-left: 40%;">
 </form>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+<!-- Option 1: Bootstrap Bundle with Popper -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>

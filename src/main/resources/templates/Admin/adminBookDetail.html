@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>AdminReservation</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-left: 50px; margin-top: 30px;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="/img/logo2.PNG" alt="" width="200px" height="75px">
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">만화 대여</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">만화 반납</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">만화 등록</a>
+                </li>
+            </ul>
+        </div>
+        <div style="margin-right: 50px;">
+            <button class="navbar-text">
+                로그인
+            </button>
+        </div>
+    </div>
+</nav>
+<div class="container my-4">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <img src="/img/book.PNG" alt="" style="width: 434px; height: 636px; margin: 30px 0 0 25%;">
+        </div>
+        <div class="col-md-6">
+            <form method="get" action="">
+                <table style="margin: 30px 0 0 25%;">
+                    <tr>
+                        <td>제목 : <span>옆자리 괴물군</span></td>
+                    </tr>
+
+                    <tr>
+                        <td>지은이 : <span>엔젤릭 은쨩</span></td>
+                    </tr>
+                    <tr>
+                        <td>등록일 : <span>2023-10-20</span></td>
+                    </tr>
+                    <tr>
+                        <td>예약 가능 도서수 : <span>11</span>
+                            대출된 도서수 : <span>14</span></td>
+                    </tr>
+                    <tr>
+                        <td>내용</td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><span>초 미소녀 은지와 두근두근 연애 라이프! 잡사봐~</span></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="card-footer" style="width: 50%; margin: 5% 25% 0 25%;">
+    <form onsubmit="addComment(event)">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="댓글을 입력하세요" required>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin: 25px 0 0 50%;">작성</button>
+    </form>
+    <div class="comments mt-3">
+    </div>
+</div>
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -21,8 +21,18 @@ public class HomeCon {
         return "/Admin/adminBookInsert";
     }
 
+    @GetMapping("/Admin/adminBookReturnList")
+    public String doAdminBookReturnList() {
+        return "/Admin/adminBookReturnList";
+    }
+
     @GetMapping("/Admin/adminBookReturn")
     public String doAdminBookReturn() {
         return "/Admin/adminBookReturn";
+    }
+
+    @GetMapping("/Admin/adminBookDetail")
+    public String doAdminBookDetail() {
+        return "/Admin/adminBookDetail";
     }
 }

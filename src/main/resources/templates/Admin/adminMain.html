@@ -29,9 +29,7 @@
             </ul>
         </div>
         <div style="margin-right: 50px;">
-            <button class="navbar-text" onclick="loginPopup();">
-                로그인
-            </button>
+            <input type="button" value="로그인" onclick="showPopup()" />
         </div>
     </div>
 </nav>
@@ -122,8 +120,8 @@
         </table>
     </div>
 <script>
-    function loginPopup() {
-    
+    function showPopup() {
+        window.open("/Admin/loginPopup","로그인창","width=400, height=100")
     }
 </script>
 <!-- Option 1: Bootstrap Bundle with Popper -->

@@ -35,4 +35,10 @@ public class HomeCon {
     public String doAdminBookDetail() {
         return "/Admin/adminBookDetail";
     }
+
+    @GetMapping("/Admin/loginPopup")
+    public String doLoginPopup() {
+        return "/Admin/loginPopup";
+    }
+
 }
